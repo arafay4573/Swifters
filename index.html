@@ -49,9 +49,10 @@
         <div class="absolute inset-0 bg-background/40 backdrop-blur-md border-b border-matrix/20"></div>
         <div class="relative max-w-screen-2xl mx-auto px-6 py-4 flex items-center justify-between">
             <!-- Logo -->
-            <a href="#" class="flex items-center gap-3 group relative">
+            <a href="#hero" class="flex items-center gap-3 group relative nav-btn-fire px-4 py-2 rounded-md border border-transparent">
                 <div class="absolute -inset-2 bg-matrix/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition duration-500"></div>
                 <img src="assets/images/logo-icon.png" alt="The Swifters Logo" class="h-20 w-auto relative z-10 drop-shadow-[0_0_12px_rgba(0,255,102,0.6)] filter invert sepia saturate-200 hue-rotate-50 brightness-150"> <!-- Adjust image filter to appear green-ish -->
+                <span class="font-display text-2xl font-bold text-matrix/70 tracking-widest uppercase relative z-10">The Swifters</span>
             </a>
 
             <!-- Navigation -->
@@ -81,42 +82,44 @@
     </header>
 
     <!-- Hero Section (First Screen) -->
-    <!-- Hero Section (First Screen) -->
-    <section id="hero" class="relative w-full h-screen flex flex-col items-center justify-center z-20 overflow-hidden bg-background">
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-matrix/5 via-background to-background pointer-events-none"></div>
+    <section id="hero" class="relative w-full h-screen flex items-center justify-center overflow-hidden bg-background pt-24">
+        <!-- Radial Background -->
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-matrix/5 via-background to-background pointer-events-none z-0"></div>
 
-        <!-- Wrapper to ensure logo and text share exact width constraints -->
-        <div class="hero-content flex flex-col items-center z-10 w-[90%] max-w-[1000px] mx-auto">
-
-            <!-- Glitch Container for Logo -->
-            <div class="logo-glitch-container logo-container relative w-full flex justify-center mb-6">
-                <!-- Extremely large logo, filling container -->
-                <img src="assets/images/logo-icon.png" alt="The Swifters" class="w-full max-w-[800px] h-auto object-contain logo-dark-idle z-10 relative">
-
-                <!-- Glitch Layers -->
-                <img src="assets/images/logo-icon.png" alt="" class="glitch-layer gl-1 absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[800px] h-auto object-contain filter invert sepia saturate-200 hue-rotate-50 brightness-150 mix-blend-screen pointer-events-none">
-                <img src="assets/images/logo-icon.png" alt="" class="glitch-layer gl-2 absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[800px] h-auto object-contain filter invert sepia saturate-200 hue-rotate-50 brightness-150 mix-blend-screen pointer-events-none">
-            </div>
-
-            <!-- Tagline forced to justify across the exact width of the logo block -->
-            <div class="w-full max-w-[800px] flex justify-between items-center glitch-text">
-                <h1 class="font-display text-2xl md:text-4xl lg:text-5xl font-bold tracking-widest text-matrixlight drop-shadow-[0_0_10px_rgba(57,255,20,0.8)] whitespace-nowrap">
-                    QUICK TO CREATE
+        <!-- Background Tagline Container (Absolutely Centered) -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-0">
+            <!-- Completely readable black font with light green stroke/shadow -->
+            <div class="text-center w-full max-w-screen-2xl">
+                <h1 class="font-display font-bold tracking-widest uppercase mb-4 whitespace-nowrap" style="font-size: 6vw; color: black; -webkit-text-stroke: 1px rgba(0,255,102,0.8); text-shadow: 0 0 10px rgba(0,255,102,0.3); line-height: 1.1;">
+                    Quick to create
                 </h1>
-                <span class="text-matrix/50 text-2xl md:text-4xl px-2 lg:px-4">|</span>
-                <h2 class="font-display text-2xl md:text-4xl lg:text-5xl font-bold tracking-widest text-matrixlight drop-shadow-[0_0_10px_rgba(57,255,20,0.8)] whitespace-nowrap">
-                    BOLD TO INNOVATE
+                <h1 class="font-display font-bold tracking-widest uppercase whitespace-nowrap" style="font-size: 6vw; color: black; -webkit-text-stroke: 1px rgba(0,255,102,0.8); text-shadow: 0 0 10px rgba(0,255,102,0.3); line-height: 1.1;">
+                    Bold to innovate
+                </h1>
+            </div>
+        </div>
+
+        <!-- Foreground Group: Logo and Name (Transitions left to right) -->
+        <!-- Placed in a container to handle the hover pause and CSS animation -->
+        <div class="z-10 w-full flex justify-center hero-foreground-transition">
+            <div class="flex flex-col items-center justify-center hero-transition-group cursor-pointer">
+                <!-- Glitch Container for Logo -->
+                <div class="logo-glitch-container logo-container relative w-full flex justify-center mb-4">
+                    <!-- Extremely large logo in the middle of the screen -->
+                    <img src="assets/images/logo-icon.png" alt="The Swifters" class="w-full max-w-[850px] h-auto object-contain logo-dark-idle z-10 relative">
+
+                    <!-- Glitch Layers -->
+                    <img src="assets/images/logo-icon.png" alt="" class="glitch-layer gl-1 absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[850px] h-auto object-contain filter invert sepia saturate-200 hue-rotate-50 brightness-150 mix-blend-screen pointer-events-none">
+                    <img src="assets/images/logo-icon.png" alt="" class="glitch-layer gl-2 absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[850px] h-auto object-contain filter invert sepia saturate-200 hue-rotate-50 brightness-150 mix-blend-screen pointer-events-none">
+                </div>
+
+                <!-- The Swifters Name Below Logo -->
+                <h2 class="font-display text-5xl md:text-7xl font-bold tracking-widest text-matrixlight drop-shadow-[0_0_15px_rgba(57,255,20,0.8)] uppercase">
+                    The Swifters
                 </h2>
             </div>
         </div>
     </section>
-
-    <!-- Kinetic Background Tagline -->
-    <div class="fixed top-0 left-0 w-full h-screen pointer-events-none z-0 flex items-center justify-center overflow-hidden">
-        <h1 id="kinetic-tagline" class="text-outline font-display text-[15vw] leading-none whitespace-nowrap opacity-30 select-none">
-            QUICK TO CREATE, BOLD TO INNOVATE &nbsp; QUICK TO CREATE, BOLD TO INNOVATE
-        </h1>
-    </div>
 
     <!-- Main Content Panels -->
     <main class="relative z-10 pt-32 pb-32 space-y-40 max-w-screen-xl mx-auto px-6">

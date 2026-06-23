@@ -51,17 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
       .from("h2.text-matrix\\/80", { y: 20, opacity: 0, duration: 1 }, "-=0.8");
 
 
-    // 3. Kinetic Typography Parallax
-    gsap.to("#kinetic-tagline", {
-        xPercent: -50, // Move it to the left
-        ease: "none",
-        scrollTrigger: {
-            trigger: "body",
-            start: "top top",
-            end: "bottom bottom",
-            scrub: 1 // Smooth scrubbing
-        }
-    });
 
     // 4. Animate content panels on scroll
     gsap.utils.toArray('.panel').forEach((panel, i) => {
