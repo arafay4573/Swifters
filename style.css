@@ -73,6 +73,35 @@ html.lenis {
     }
 }
 
+/* Hero Transitions */
+@keyframes fast-shift {
+    0% { transform: translateX(0); }
+    10% { transform: translateX(20px); }
+    20% { transform: translateX(-20px); }
+    30% { transform: translateX(0); }
+    100% { transform: translateX(0); }
+}
+
+.hero-foreground-transition {
+    animation: fast-shift 4s infinite ease-in-out;
+}
+
+.hero-foreground-transition:hover {
+    animation-play-state: paused;
+}
+
+/* Make foreground elements glow with fire when hovered together */
+.hero-transition-group:hover .logo-dark-idle {
+    filter: brightness(0) invert(1) sepia(1) hue-rotate(80deg) saturate(1000%) brightness(1.5) drop-shadow(0 0 20px #39ff14) drop-shadow(0 0 40px #39ff14) drop-shadow(0 0 60px #39ff14) drop-shadow(0 0 80px #39ff14);
+    animation: green-fire 0.4s infinite alternate;
+}
+
+.hero-transition-group:hover h2 {
+    animation: green-fire 0.4s infinite alternate;
+    color: #ffffff;
+    text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px #39ff14;
+}
+
 /* Dark Logo with Glowing Green Edges */
 .logo-dark-idle {
     filter: brightness(0) drop-shadow(0 0 5px #00FF66) drop-shadow(0 0 10px #00FF66);
