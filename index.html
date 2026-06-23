@@ -56,23 +56,23 @@
 
             <!-- Navigation -->
             <nav class="hidden md:flex items-center gap-2">
-                <a href="#about" class="nav-btn relative px-5 py-2 text-sm tracking-widest uppercase font-semibold text-matrix/70 hover:text-matrixlight transition-colors duration-300 overflow-hidden rounded-md border border-transparent hover:border-matrix/50">
+                <a href="#about" class="nav-btn nav-btn-fire relative px-5 py-2 text-sm tracking-widest uppercase font-semibold text-matrix/70 hover:text-matrixlight transition-colors duration-300 overflow-hidden rounded-md border border-transparent hover:border-matrix/50">
                     <span class="relative z-10">About Us</span>
                     <div class="absolute inset-0 bg-matrix/10 opacity-0 transition-opacity duration-300"></div>
                 </a>
-                <a href="#journey" class="nav-btn relative px-5 py-2 text-sm tracking-widest uppercase font-semibold text-matrix/70 hover:text-matrixlight transition-colors duration-300 overflow-hidden rounded-md border border-transparent hover:border-matrix/50">
+                <a href="#journey" class="nav-btn nav-btn-fire relative px-5 py-2 text-sm tracking-widest uppercase font-semibold text-matrix/70 hover:text-matrixlight transition-colors duration-300 overflow-hidden rounded-md border border-transparent hover:border-matrix/50">
                     <span class="relative z-10">Our Journey</span>
                     <div class="absolute inset-0 bg-matrix/10 opacity-0 transition-opacity duration-300"></div>
                 </a>
-                <a href="#tech" class="nav-btn relative px-5 py-2 text-sm tracking-widest uppercase font-semibold text-matrix/70 hover:text-matrixlight transition-colors duration-300 overflow-hidden rounded-md border border-transparent hover:border-matrix/50">
+                <a href="#tech" class="nav-btn nav-btn-fire relative px-5 py-2 text-sm tracking-widest uppercase font-semibold text-matrix/70 hover:text-matrixlight transition-colors duration-300 overflow-hidden rounded-md border border-transparent hover:border-matrix/50">
                     <span class="relative z-10">Our Tech Stack</span>
                     <div class="absolute inset-0 bg-matrix/10 opacity-0 transition-opacity duration-300"></div>
                 </a>
-                <a href="#projects" class="nav-btn relative px-5 py-2 text-sm tracking-widest uppercase font-semibold text-matrix/70 hover:text-matrixlight transition-colors duration-300 overflow-hidden rounded-md border border-transparent hover:border-matrix/50">
+                <a href="#projects" class="nav-btn nav-btn-fire relative px-5 py-2 text-sm tracking-widest uppercase font-semibold text-matrix/70 hover:text-matrixlight transition-colors duration-300 overflow-hidden rounded-md border border-transparent hover:border-matrix/50">
                     <span class="relative z-10">Projects</span>
                     <div class="absolute inset-0 bg-matrix/10 opacity-0 transition-opacity duration-300"></div>
                 </a>
-                <a href="#contact" class="nav-btn relative px-5 py-2 text-sm tracking-widest uppercase font-semibold text-matrix/70 hover:text-matrixlight transition-colors duration-300 overflow-hidden rounded-md border border-transparent hover:border-matrix/50">
+                <a href="#contact" class="nav-btn nav-btn-fire relative px-5 py-2 text-sm tracking-widest uppercase font-semibold text-matrix/70 hover:text-matrixlight transition-colors duration-300 overflow-hidden rounded-md border border-transparent hover:border-matrix/50">
                     <span class="relative z-10">Contact Us</span>
                     <div class="absolute inset-0 bg-matrix/10 opacity-0 transition-opacity duration-300"></div>
                 </a>
@@ -81,24 +81,33 @@
     </header>
 
     <!-- Hero Section (First Screen) -->
+    <!-- Hero Section (First Screen) -->
     <section id="hero" class="relative w-full h-screen flex flex-col items-center justify-center z-20 overflow-hidden bg-background">
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-matrix/5 via-background to-background pointer-events-none"></div>
 
-        <div class="hero-content flex flex-col items-center z-10 text-center">
+        <!-- Wrapper to ensure logo and text share exact width constraints -->
+        <div class="hero-content flex flex-col items-center z-10 w-[90%] max-w-[1000px] mx-auto">
+
             <!-- Glitch Container for Logo -->
-            <div class="logo-glitch-container relative mb-8">
-                <img src="assets/images/logo-icon.png" alt="The Swifters" class="h-64 w-auto drop-shadow-[0_0_25px_rgba(0,255,102,0.8)] filter invert sepia saturate-200 hue-rotate-50 brightness-150 z-10 relative">
+            <div class="logo-glitch-container logo-container relative w-full flex justify-center mb-6">
+                <!-- Extremely large logo, filling container -->
+                <img src="assets/images/logo-icon.png" alt="The Swifters" class="w-full max-w-[800px] h-auto object-contain logo-dark-idle z-10 relative">
+
                 <!-- Glitch Layers -->
-                <img src="assets/images/logo-icon.png" alt="" class="glitch-layer gl-1 absolute top-0 left-0 h-64 w-auto filter invert sepia saturate-200 hue-rotate-50 brightness-150 opacity-50 mix-blend-screen">
-                <img src="assets/images/logo-icon.png" alt="" class="glitch-layer gl-2 absolute top-0 left-0 h-64 w-auto filter invert sepia saturate-200 hue-rotate-50 brightness-150 opacity-50 mix-blend-screen">
+                <img src="assets/images/logo-icon.png" alt="" class="glitch-layer gl-1 absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[800px] h-auto object-contain filter invert sepia saturate-200 hue-rotate-50 brightness-150 mix-blend-screen pointer-events-none">
+                <img src="assets/images/logo-icon.png" alt="" class="glitch-layer gl-2 absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[800px] h-auto object-contain filter invert sepia saturate-200 hue-rotate-50 brightness-150 mix-blend-screen pointer-events-none">
             </div>
 
-            <h1 class="font-display text-4xl md:text-6xl font-bold tracking-widest text-matrixlight glitch-text drop-shadow-[0_0_10px_rgba(57,255,20,0.8)]">
-                QUICK TO CREATE
-            </h1>
-            <h2 class="font-display text-2xl md:text-4xl mt-2 tracking-[0.2em] text-matrix/80">
-                BOLD TO INNOVATE
-            </h2>
+            <!-- Tagline forced to justify across the exact width of the logo block -->
+            <div class="w-full max-w-[800px] flex justify-between items-center glitch-text">
+                <h1 class="font-display text-2xl md:text-4xl lg:text-5xl font-bold tracking-widest text-matrixlight drop-shadow-[0_0_10px_rgba(57,255,20,0.8)] whitespace-nowrap">
+                    QUICK TO CREATE
+                </h1>
+                <span class="text-matrix/50 text-2xl md:text-4xl px-2 lg:px-4">|</span>
+                <h2 class="font-display text-2xl md:text-4xl lg:text-5xl font-bold tracking-widest text-matrixlight drop-shadow-[0_0_10px_rgba(57,255,20,0.8)] whitespace-nowrap">
+                    BOLD TO INNOVATE
+                </h2>
+            </div>
         </div>
     </section>
 
