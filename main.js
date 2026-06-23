@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .from(".logo-glitch-container > img:first-child", { scale: 0.8, opacity: 0, filter: "brightness(500%)", duration: 1.5, ease: "expo.out" }, "-=0.2")
       // Fade in text
       .from(".glitch-text", { y: 20, opacity: 0, duration: 1, stagger: 0.2 }, "-=1")
-      .from("h2.text-matrix\\/80", { y: 20, opacity: 0, duration: 1 }, "-=0.8");
+      .from("h2", { y: 20, opacity: 0, duration: 1 }, "-=0.8");
 
 
 
