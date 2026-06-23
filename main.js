@@ -35,22 +35,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 2. Hero Glitch Entrance Animation
+    // 2. Hero Entrance Animation
     const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
 
-    // Quick glitching sequence for the logo
-    tl.to(".gl-1", { opacity: 1, clipPath: "inset(10% 0 80% 0)", x: -10, duration: 0.1 })
-      .to(".gl-2", { opacity: 1, clipPath: "inset(80% 0 10% 0)", x: 10, duration: 0.1 }, "<")
-      .to(".gl-1", { clipPath: "inset(40% 0 20% 0)", x: 20, duration: 0.1 })
-      .to(".gl-2", { clipPath: "inset(20% 0 40% 0)", x: -20, duration: 0.1 }, "<")
-      .to(".gl-1, .gl-2", { opacity: 0, x: 0, duration: 0.1 })
-      // Scale up main logo
-      .from(".logo-glitch-container > img:first-child", { scale: 0.8, opacity: 0, filter: "brightness(500%)", duration: 1.5, ease: "expo.out" }, "-=0.2")
-      // Fade in text
-      .from(".glitch-text", { y: 20, opacity: 0, duration: 1, stagger: 0.2 }, "-=1")
-      .from("h2", { y: 20, opacity: 0, duration: 1 }, "-=0.8");
-
-
+    tl.from(".hero-title", { y: 30, opacity: 0, duration: 1.5, ease: "expo.out" })
+      .from(".hero-tagline", { y: 20, opacity: 0, duration: 1, stagger: 0.2 }, "-=1");
 
     // 4. Animate content panels on scroll
     gsap.utils.toArray('.panel').forEach((panel, i) => {
