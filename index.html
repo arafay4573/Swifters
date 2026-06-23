@@ -90,10 +90,10 @@
         <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-0">
             <!-- Completely readable black font with light green stroke/shadow -->
             <div class="text-center w-full max-w-screen-2xl">
-                <h1 class="font-display font-bold tracking-widest uppercase mb-4 whitespace-nowrap" style="font-size: 6vw; color: black; -webkit-text-stroke: 1px rgba(0,255,102,0.8); text-shadow: 0 0 10px rgba(0,255,102,0.3); line-height: 1.1;">
+                <h1 class="font-display font-bold tracking-widest uppercase mb-4 whitespace-nowrap" style="font-size: 6vw; color: black; -webkit-text-stroke: 1px rgba(0,255,102,0.2); text-shadow: 0 0 10px rgba(0,255,102,0.1); line-height: 1.1;">
                     Quick to create
                 </h1>
-                <h1 class="font-display font-bold tracking-widest uppercase whitespace-nowrap" style="font-size: 6vw; color: black; -webkit-text-stroke: 1px rgba(0,255,102,0.8); text-shadow: 0 0 10px rgba(0,255,102,0.3); line-height: 1.1;">
+                <h1 class="font-display font-bold tracking-widest uppercase whitespace-nowrap" style="font-size: 6vw; color: black; -webkit-text-stroke: 1px rgba(0,255,102,0.2); text-shadow: 0 0 10px rgba(0,255,102,0.1); line-height: 1.1;">
                     Bold to innovate
                 </h1>
             </div>
@@ -101,20 +101,20 @@
 
         <!-- Foreground Group: Logo and Name (Transitions left to right) -->
         <!-- Placed in a container to handle the hover pause and CSS animation -->
-        <div class="z-10 w-full flex justify-center hero-foreground-transition">
-            <div class="flex flex-col items-center justify-center hero-transition-group cursor-pointer">
+        <div class="z-10 w-full h-full flex items-center justify-center hero-foreground-transition">
+            <div class="flex flex-col items-center justify-center hero-transition-group cursor-pointer w-full">
                 <!-- Glitch Container for Logo -->
-                <div class="logo-glitch-container logo-container relative w-full flex justify-center mb-4">
-                    <!-- Extremely large logo in the middle of the screen -->
-                    <img src="assets/images/logo-icon.png" alt="The Swifters" class="w-full max-w-[850px] h-auto object-contain logo-dark-idle z-10 relative">
+                <div class="logo-glitch-container logo-container relative w-full flex justify-center">
+                    <!-- Extremely large logo in the middle of the screen, adjusted height so the text below it is completely visible on screen -->
+                    <img src="assets/images/logo-icon.png" alt="The Swifters" class="w-full max-w-[850px] max-h-[60vh] object-contain logo-dark-idle z-10 relative">
 
                     <!-- Glitch Layers -->
-                    <img src="assets/images/logo-icon.png" alt="" class="glitch-layer gl-1 absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[850px] h-auto object-contain filter invert sepia saturate-200 hue-rotate-50 brightness-150 mix-blend-screen pointer-events-none">
-                    <img src="assets/images/logo-icon.png" alt="" class="glitch-layer gl-2 absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[850px] h-auto object-contain filter invert sepia saturate-200 hue-rotate-50 brightness-150 mix-blend-screen pointer-events-none">
+                    <img src="assets/images/logo-icon.png" alt="" class="glitch-layer gl-1 absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[850px] max-h-[60vh] object-contain filter invert sepia saturate-200 hue-rotate-50 brightness-150 mix-blend-screen pointer-events-none">
+                    <img src="assets/images/logo-icon.png" alt="" class="glitch-layer gl-2 absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[850px] max-h-[60vh] object-contain filter invert sepia saturate-200 hue-rotate-50 brightness-150 mix-blend-screen pointer-events-none">
                 </div>
 
-                <!-- The Swifters Name Below Logo -->
-                <h2 class="font-display text-5xl md:text-7xl font-bold tracking-widest text-matrixlight drop-shadow-[0_0_15px_rgba(57,255,20,0.8)] uppercase">
+                <!-- The Swifters Name Below Logo (Pulled up closer with negative margin) -->
+                <h2 class="font-display text-5xl md:text-7xl font-bold tracking-widest text-matrixlight drop-shadow-[0_0_15px_rgba(57,255,20,0.8)] uppercase -mt-4 md:-mt-8">
                     The Swifters
                 </h2>
             </div>
